@@ -57,9 +57,36 @@ function setResetBtn() {
 // Start/Stop Button
 btnLeft.addEventListener('click', () => {
   // ... your code goes here
+  const bottonLeft = document.querySelector('#btnLeft').innetText
+  switch(bottonLeft) {
+    case "START":
+      document.querySelector('#btnLeft').classList.toggle('start')
+      document.querySelector('#btnLeft').classList.toggle('stop')
+      document.querySelector('#btnLeft').innetText = "STOP"
+      console.log("start")
+      chronometer.startClick(printTime)
+    break;
+    case "STOP":
+      document.querySelector('#btnLeft').classList.toggle('stop')
+      document.querySelector('#btnLeft').classList.toggle('start')
+      document.querySelector('#btnLeft').innetText = "START"
+      chronometer.stopClick()
+    break;
+  }
 });
 
 // Reset/Split Button
 btnRight.addEventListener('click', () => {
-  // ... your code goes here
+  // ... your code goes here  
+  const btnRight = document.querySelector('#btnRight').innetText
+  switch (btnRight) {
+    case 'SPLIT':
+      document.querySelector('#btnRight').classList.toggle('Split')
+      document.querySelector('#btnRight').classList.toggle('Reset')
+      document.querySelector('btnRight').innetText = 
+
+    break;
+    case 'RESET'
+    break;
+  }
 });
